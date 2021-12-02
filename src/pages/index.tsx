@@ -1,14 +1,11 @@
-import type { NextPage } from 'next'
-import Header from '../components/Header'
-import HeadingBar from '../components/HeadingBar'
+import type { NextPage } from "next";
+
+import HomeTemplate from '../templates/Home'
 
 const Home: NextPage = () => {
   return (
-    <>
-      <HeadingBar />
-      <Header />
-    </>
-  )
-}
+   <HomeTemplate />
+  );
+};
 
-export default Home
+export default Home;
