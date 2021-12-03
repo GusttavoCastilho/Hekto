@@ -10,6 +10,10 @@
     justify-content: space-around;
 
     background-color: #ffffff;
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .title {

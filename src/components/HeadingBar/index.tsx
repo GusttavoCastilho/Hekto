@@ -69,9 +69,27 @@ const HeadingBar = () => {
 
             {/* Menu Links */}
             <div className={styles.menuFull}>
-              <Link href="/login" passHref>
+              <Link href="/" passHref>
                 <div className={styles.link}>
-                  <a>Login</a>
+                  <a>Home</a>
+                </div>
+              </Link>
+
+              <Link href="/pages" passHref>
+                <div className={styles.link}>
+                  <a>Pages</a>
+                </div>
+              </Link>
+
+              <Link href="/products" passHref>
+                <div className={styles.link}>
+                  <a>Products</a>
+                </div>
+              </Link>
+
+              <Link href="/blog" passHref>
+                <div className={styles.link}>
+                  <a>Blog</a>
                 </div>
               </Link>
 
@@ -84,6 +102,12 @@ const HeadingBar = () => {
               <Link href="/cart" passHref>
                 <div className={styles.link}>
                   <a>Cart</a>
+                </div>
+              </Link>
+
+              <Link href="/login" passHref>
+                <div className={styles.link}>
+                  <a>Login</a>
                 </div>
               </Link>
             </div>
