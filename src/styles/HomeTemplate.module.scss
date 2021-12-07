@@ -14,6 +14,10 @@
         font-size: 42px;
         font-family: "Josefin Sans";
         color: $text;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 30px;
+        }
     }
 
     .products {
@@ -35,5 +39,13 @@
 
     > div {
         width: 1000px;
+
+        @media only screen and (max-width: 768px) {
+            width: 600px;
+        }
+
+        @media only screen and (max-width: 426px) {
+            width: 300px;
+        }
     }
 }

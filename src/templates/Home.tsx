@@ -31,24 +31,17 @@ const settings: Settings = {
       },
     },
     {
-      breakpoint: 1024,
+      breakpoint: 768,
       settings: {
         arrows: false,
-        slidesToShow: 2.2,
+        slidesToShow: 2,
       },
     },
     {
       breakpoint: 570,
       settings: {
         arrows: false,
-        slidesToShow: 1.2,
-      },
-    },
-    {
-      breakpoint: 375,
-      settings: {
-        arrows: false,
-        slidesToShow: 1.1,
+        slidesToShow: 1,
       },
     },
   ],

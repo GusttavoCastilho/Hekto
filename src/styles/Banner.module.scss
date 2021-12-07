@@ -9,9 +9,11 @@
 
     display: flex;
     flex-direction: row;
-    // align-items: center;
     justify-content: space-around;
 
+    @media only screen and (max-width: 426px) {
+        height: 350px;
+    }
 
     .lamp {
         position: absolute;
@@ -19,6 +21,17 @@
         max-height: 300px;
 
         left: -40px;
+
+        @media only screen and (max-width: 768px) {
+            max-width: 150px;
+            max-height: 150px;
+
+            left: 0px;
+        }
+
+        @media only screen and (max-width: 426px) {
+            display: none;
+        }
     }
 }
 
@@ -34,11 +47,23 @@
 
     gap: 10px;
 
+    @media only screen and (max-width: 426px) {
+         margin-left: 20px;
+    }
+
     h6 {
         font-size: 16px;
         font-weight: bold;
         font-family: 'Lato';
         color: $pink;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 14px;
+        }
+
+        @media only screen and (max-width: 426px) {
+            font-size: 12px;
+        }
     }
 
     h1 {
@@ -46,13 +71,31 @@
         font-weight: bold;
         font-family: 'Josefin Sans';
         line-height: 50px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        @media only screen and (max-width: 426px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
 
     p {
         font-size: 16px;
         font-weight: bold;
         font-family: 'Lato';
-        color: #8A8FB9
+        color: #8A8FB9;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+
+        @media only screen and (max-width: 426px) {
+            font-size: 10px;
+        }
     }
 
     button {
@@ -71,9 +114,20 @@
 
     margin-top: 20px;
 
+    @media only screen and (max-width: 426px) {
+        height: 328px;
+    }
+
     img {
         width: 300px;
         height: 300px;
+
+        @media only screen and (max-width: 768px) {
+            width: 150px;
+            height: 150px;
+
+            margin-left: 60px;
+        }
     }
 
 }
