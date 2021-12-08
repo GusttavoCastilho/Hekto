@@ -1,8 +1,7 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 import { IState } from "../store";
-import { ICartItem, IProduct } from "../store/modules/cart/types";
 import { removeProductToCart } from "../store/modules/cart/actions";
 
 import Header from "../components/Header";
@@ -11,10 +10,9 @@ import Banner from "../components/Banner";
 import ProductCard from "../components/ProductCard";
 import itemsBanner from "../components/Banner/mock";
 
-import api from "../services/api";
-
 import styles from "../styles/HomeTemplate.module.scss";
 import SlickSlider, { Settings } from "react-slick";
+import { fetchProductRequest } from "../store/modules/product/actions";
 
 const settings: Settings = {
   dots: true,
@@ -48,16 +46,13 @@ const settings: Settings = {
 };
 
 const Home = () => {
-  const cart = useSelector<IState, ICartItem[]>((state) => state.cart.items);
+  const cart = useSelector((state: IState) => state.cart.items);
+  const { products, pending, error } = useSelector((state: IState) => state.product)
   const dispatch = useDispatch();
-  const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
-    api
-      .get<IProduct[]>("/products?limit=5")
-      .then((response) => setProducts(response.data))
-      .catch((error) => console.log(error));
-  }, []);
+    dispatch(fetchProductRequest())
+  },[dispatch]);
 
   const handleRemoveProductToCart = useCallback(
     (productId: number) => {
